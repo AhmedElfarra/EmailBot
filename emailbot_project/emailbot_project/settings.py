@@ -75,11 +75,13 @@ WSGI_APPLICATION = 'emailbot_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'EmailBot',
+        'CLIENT': {
+           'host': 'mongodb+srv://Aelfarra:fayed12345@cluster0.ox1fq.mongodb.net/EmailBot?retryWrites=true&w=majority',
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
